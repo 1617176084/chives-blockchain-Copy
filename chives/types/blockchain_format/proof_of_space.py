@@ -52,8 +52,8 @@ class ProofOfSpace(Streamable):
         if new_challenge != self.challenge:
             return None
 
-        if not ProofOfSpace.passes_plot_filter(constants, plot_id, original_challenge_hash, signage_point):
-            return None
+        # if not ProofOfSpace.passes_plot_filter(constants, plot_id, original_challenge_hash, signage_point):
+        #     return None
 
         return self.get_quality_string(plot_id)
 
