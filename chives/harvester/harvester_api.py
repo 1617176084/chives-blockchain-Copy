@@ -182,12 +182,14 @@ class HarvesterAPI:
                     # Passes the plot filter (does not check sp filter yet though, since we have not reached sp)
                     # This is being executed at the beginning of the slot
                     total += 1
-                    # if ProofOfSpace.passes_plot_filter(
-                    #     self.harvester.constants,
-                    #     try_plot_info.prover.get_id(),
-                    #     new_challenge.challenge_hash,
-                    #     new_challenge.sp_hash,
-                    # ):
+                    if ProofOfSpace.passes_plot_filter(
+                        self.harvester.constants,
+                        try_plot_info.prover.get_id(),
+                        new_challenge.challenge_hash,
+                        new_challenge.sp_hash,
+                    ):
+                       1=1
+                       
                     passed += 1
                     awaitables.append(lookup_challenge(try_plot_filename, try_plot_info))
             except Exception as e:
