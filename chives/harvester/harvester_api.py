@@ -188,8 +188,8 @@ class HarvesterAPI:
                         new_challenge.challenge_hash,
                         new_challenge.sp_hash,
                     ):
-                       1=1
-                       
+                      p =1
+
                     passed += 1
                     awaitables.append(lookup_challenge(try_plot_filename, try_plot_info))
             except Exception as e:
